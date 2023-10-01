@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ruleset name="Custom PMD"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>PMD Custom Rules</description>
+
+    <rule class="com.example.pocpmd.pmd.CheckFilesExistRule"
+          name="RequiredFile"
+          language="java">
+        <description>Required File does not exist</description>
+        <priority>1</priority>
+    </rule>
+
+    <rule class="com.example.pocpmd.pmd.ApplicationDotYaml"
+          name="ApplicationYaml"
+          language="java"
+          message="Spring Application Name doesn't follow AB structure. Pattern: ^(ab-).*(-service|-ms)$">
+        <description>Application name should be as AB structure</description>
+        <priority>2</priority>
+
+    </rule>
+
+</ruleset>
